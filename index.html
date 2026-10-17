@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<title>展示後の見立てノート</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>展示後の見立てノート</h1>
+  <p class="sub">本日のレースを、展示が出たあとに見立てるための材料集です。</p>
+</header>
+
+<section class="picker" aria-label="当日のレース">
+  <div class="row between">
+    <div class="today"><span class="todayTag">本日</span> <span id="dateLabel"></span></div>
+    <button id="loadDay" class="btn" type="button">当日データ取得</button>
+  </div>
+  <p id="dayNote" class="note" aria-live="polite"></p>
+</section>
+
+<section class="card" id="schedule" hidden></section>
+<section class="card" id="selected" hidden></section>
+
+<div id="msg" class="msg" role="status" aria-live="polite" hidden></div>
+
+<main id="race" hidden>
+  <section class="raceHead" id="raceHead"></section>
+  <section class="card" id="roles"></section>
+  <section class="card" id="overview"></section>
+  <div class="sectionTitle">選手ごとのコース別成績</div>
+  <div id="boats"></div>
+  <section class="card" id="resultBox" hidden></section>
+  <section class="card" id="memoBox"></section>
+</main>
+
+<footer class="foot">
+  <p>数字は過去の成績の集計から計算した目安です。当たりやすさを示すものではなく、儲かることを示すものでもありません。投票は20歳以上の方が、ご自身の判断と範囲で、テレボートなどの公式の方法で行ってください(このサイトは投票の操作を行いません)。</p>
+  <p class="small">スタートの見込みは「直近の平均ST・このコースでのST・F後かどうか」からの簡易な推定です。選手の成績の集計は定期的に更新しており、最新のレースの結果は含まれない場合があります。</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="engine.js"></script>
+<script src="parser.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
